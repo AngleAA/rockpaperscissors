@@ -10,12 +10,15 @@ $("#rock").click(function(){
 
     if ( com >= 2/3 && com <= 1) {
         $("#computerChoice").text("Scissors");
-    } else if (com >= 1/3 && com <= 2/3) {
+        alert("You Win!");
+    } else if (com >= 1/3 && com < 2/3) {
         $("#computerChoice").text("Rock");
-    } else if (com >= 1/3 && com <= 0) {
+        alert("Tie!");
+    } else if (com < 1/3) {
         $("#computerChoice").text("Paper");
+        alert("You lost...");
     } else {
-        $("body").alert("rps broke");
+        alert("rps broke");
     }
 
     $("#userChoice").html("Rock");
@@ -23,10 +26,43 @@ $("#rock").click(function(){
 });
 
 $("#paper").click(function(){
-   
+    
+    let com = Math.random();
+
+    if ( com >= 2/3 && com <= 1) {
+        $("#computerChoice").text("Rock");
+        alert("You Win!");
+    } else if (com >= 1/3 && com < 2/3) {
+        $("#computerChoice").text("Paper");
+        alert("Tie!");
+    } else if (com < 1/3) {
+        $("#computerChoice").text("Scissors");
+        alert("You lost...");
+    } else {
+        $("body").alert("rps broke");
+    }
+    $("#userChoice").html("Paper");
+
 });
 
 $("#scissors").click(function(){
+    
+    let com = Math.random();
+
+    if ( com >= 2/3 && com <= 1) {
+        $("#computerChoice").text("Rock");
+        alert("You Win!");
+    } else if (com >= 1/3 && com < 2/3) {
+        $("#computerChoice").text("Scissors");
+        alert("Tie!");
+    } else if (com < 1/3) {
+        $("#computerChoice").text("Paper");
+        alert("You lost...");
+    } else {
+        $("body").alert("rps broke");
+    }
+
+    $("#userChoice").html("Scissors");
 
 });
 
